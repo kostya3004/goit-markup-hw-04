@@ -61,7 +61,7 @@ body {
     padding-bottom: 94px;
 }
 
-/* -------HEADER ------*/
+/* --------------HEADER -------------*/
 .page-header-container {
     display: flex;
     align-items: center;
@@ -74,6 +74,7 @@ body {
     display: flex;
     margin-left: auto;
     gap: 50px;
+    align-items: center;
 }
 .logo-header {
     margin-right: 93px;
@@ -108,8 +109,20 @@ header {
     padding-bottom: 25px;
     border-bottom: 1px #ECECEC solid;
 }
-/* -------HEADER ------*/
-/* -------BODY ------ */
+.header-contacts-list-item>a{
+    display: flex;
+    align-items: center;
+}
+.header-contacts-list-icon{
+    fill: var(--secondary-color);
+    margin-right: 10px;
+}
+.header-contacts-list-item:hover .header-contacts-list-icon,
+.header-contacts-list-item:focus .header-contacts-list-icon{
+    fill: var(--accent-color)
+}
+/* --------------HEADER -------------*/
+/* --------------BODY ------------- */
 .index-heading {
     width: 696px;
     font-weight: 900;
@@ -121,12 +134,20 @@ header {
     color: var(--dark-scheme-text-color);
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 .heading{
-
-    background-color: var(--dark-scheme-bcg-color);
+    background-color: #c4c4c4;
     text-align: center;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-heading.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* width: 1600px; */
+    height: 600px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 .order-btn {
     font-size: 16px;
@@ -161,6 +182,16 @@ header {
     width: 270px;
     /* flex-basis: calc((100% - 90px) / 4); */
 }
+.advantages-icon-bg{
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .index-heading2 {
     font-size: 36px;
     font-weight: 700;
@@ -184,7 +215,7 @@ header {
     font-weight: 400;
     line-height: 1.19;
     color: var(--secondary-color);
-    padding-bottom: 30px;
+    padding-bottom: 16px;
 }
 .advantages-list {
     display: flex;
@@ -202,7 +233,7 @@ header {
     gap: 30px;
     text-align: center;
 }
-.team-list li {
+.team-card {
     border-radius: 0px 0px 4px 4px;
     background-color: #FFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -210,9 +241,64 @@ header {
 .team {
     background-color: #F5F4FA;
 }
+.team-card-social-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.team-card-social-list-icon {
+    width: 20px;
+    height: 20px;
+    fill: #AFB1B8;
+}
+.team-card-social-list-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+.team-card-social-list-link:hover,
+.team-card-social-list-link:focus {
+    background-color: var(--accent-color);
+}
+.team-card-social-list-link:hover .team-card-social-list-icon,
+.team-card-social-list-link:focus .team-card-social-list-icon {
+    fill: #FFF;
+}
+.clients-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.clients-list-icon {
+    fill: #AFB1B8;
+    width: 106px;
+    height: 60px;
+}
+.clients-list-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+.clients-list-link:hover,
+.clients-list-link:focus {
+    border: 1px solid var(--accent-color);
+}
+.clients-list-link:hover .clients-list-icon,
+.clients-list-link:focus .clients-list-icon{
+    fill: var(--accent-color);
+}
 
-/* -------BODY ------ */
-/* -------FOOTER ------ */
+/* --------------BODY ------------- */
+/* --------------FOOTER ------------- */
 footer {
     background-color: var(--dark-scheme-bcg-color);
     padding-top: 60px;
@@ -227,6 +313,7 @@ footer {
     color: var(--dark-scheme-text-color);
     display: inline-block;
     margin-bottom: 20px;
+    margin-right: 156px;
 }
 .logo-footer>span{
     color: var(--accent-color)
@@ -244,8 +331,47 @@ address a{
 .address-list>li:not(:last-child) {
     margin-bottom: 9px;
 }
-/* -------FOOTER ------ */
-/* -------PORTFOLIO ------ */
+.page-footer-container {
+    display: flex;
+}
+.join p{
+    color:var(--dark-scheme-text-color);
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    padding-top: 12px;
+    margin-bottom: 20px;
+}
+.join-social-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.join-social-list-icon {
+    width: 20px;
+    height: 20px;
+    fill: #FFF;
+}
+
+.join-social-list-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.join-social-list-link:hover,
+.join-social-list-link:focus {
+    background-color: var(--accent-color);
+}
+
+/* --------------FOOTER ------------- */
+/* --------------PORTFOLIO ------------- */
 .portfolio-btn {
     font-weight: 500;
     font-size: 16px;
@@ -259,10 +385,12 @@ address a{
 .portfolio-btn:focus {
     color: #FFF;
     background-color: var(--accent-color);
-    padding: 6px 25px;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    /* padding: 6px 25px; */
     /* На макеті активна кнопка збільшеного розміру, 
     не зрозуміло чи тому що перша, чи це через активність. 
-    Тому зробив збільшений падинг для активних кнопок. */
+    Тому зробив збільшений падинг для активних кнопок.
+    P.S.: Прибрав, бо не подобається */
 }
 .portfolio-list h2 {
     font-weight: 700;
@@ -280,6 +408,11 @@ address a{
     border: 1px solid #EEEEEE;
     max-width: 370px;
 }
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-main-section {
     display: flex;
     flex-direction: column;
@@ -297,7 +430,6 @@ address a{
     flex-wrap: wrap;
     gap: 30px;
     flex-basis: calc((100% - 60px) / 3);
-  
 }
 .portfolio-list img {
     margin-bottom: 20px;
@@ -312,4 +444,4 @@ address a{
     margin-left: auto;
     margin-right: auto;
 }
-/* -------PORTFOLIO ------ */
+/* --------------PORTFOLIO ------------- */
