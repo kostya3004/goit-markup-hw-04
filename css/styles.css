@@ -142,16 +142,17 @@ header {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-heading.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    /* width: 1600px; */
+    max-width: 1600px;
     height: 600px;
-    /* margin-left: auto;
-    margin-right: auto; */
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 200px;
     padding-bottom: 200px;
 }
 .order-btn {
     font-size: 16px;
     font-weight: 700;
+    letter-spacing: 0.06em;
     line-height: 1.9;
     color: #FFF;
     background-color: var(--accent-color);
@@ -215,7 +216,7 @@ header {
     font-weight: 400;
     line-height: 1.19;
     color: var(--secondary-color);
-    padding-bottom: 16px;
+    margin-bottom: 16px;
 }
 .advantages-list {
     display: flex;
@@ -245,7 +246,7 @@ header {
     display: flex;
     gap: 10px;
     justify-content: center;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 .team-card-social-list-icon {
     width: 20px;
@@ -333,13 +334,13 @@ address a{
 }
 .page-footer-container {
     display: flex;
+    align-items: baseline;
 }
 .join p{
     color:var(--dark-scheme-text-color);
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
-    padding-top: 12px;
     margin-bottom: 20px;
 }
 .join-social-list {
@@ -397,6 +398,7 @@ address a{
     font-size: 18px;
     line-height: 2.0;
     letter-spacing: 0.06em;
+    color: var(--main-color);
 } 
 .portfolio-list p {
     font-weight: 400;
@@ -404,15 +406,15 @@ address a{
     line-height: 1.9;
     color: var(--secondary-color);
 }
-.portfolio-list-item {
-    border: 1px solid #EEEEEE;
-    max-width: 370px;
+.portfolio-list-link {
+    text-decoration: none;
+    display: block;
 }
-.portfolio-list-item:hover,
-.portfolio-list-item:focus {
+.portfolio-list-link:hover,
+.portfolio-list-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
+/* На лі-шках хіба не можна було лишити ховер фокус? працює однаково */
 .portfolio-main-section {
     display: flex;
     flex-direction: column;
@@ -431,17 +433,12 @@ address a{
     gap: 30px;
     flex-basis: calc((100% - 60px) / 3);
 }
-.portfolio-list img {
-    margin-bottom: 20px;
-}
 .portfolio-list h2 {
     margin-bottom: 4px;
 }
-
 .portfolio-unit-title {
-    width: 322px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    border: 1px solid #EEEEEE;
+    border-top: none;
+    padding: 20px 24px;
 }
 /* --------------PORTFOLIO ------------- */
